@@ -35,3 +35,20 @@ vector<double> SORDetailed(const vector<vector<double>>& A, const vector<double>
                 if (j != i) sum += A[i][j] * x[j];
             x[i] = (1 - w) * x[i] + w * (b[i] - sum) / A[i][i];
         }
+printVector(x);
+        iter++;
+        double maxErr = 0.0;
+        for (int i = 0; i < n; i++)
+            maxErr = max(maxErr, fabs(x[i] - x_old[i]));
+        if (maxErr < tol) break;
+    }
+    return x;
+}
+
+int main() {
+    int n;
+    cout << "Enter number of equations: ";
+    cin >> n;
+
+    vector<vector<double>> A(n, vector<double>(n));
+    vector<double> b(n);
