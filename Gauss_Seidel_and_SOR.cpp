@@ -8,6 +8,7 @@ void printVector(const vector<double>& x) {
     cout << endl;
 }
 
+// Gauss-Seidel with detailed iteration
 vector<double> gaussSeidelDetailed(const vector<vector<double>>& A, const vector<double>& b, double tol, int& iter) {
     int n = A.size();
     vector<double> x(n, 0.0);
