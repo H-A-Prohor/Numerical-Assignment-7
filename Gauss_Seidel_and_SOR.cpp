@@ -33,12 +33,11 @@ cout << "\nGauss-Seidel Iterations:\n";
     return x;
 }
 
-
+// SOR with detailed iteration
 vector<double> SORDetailed(const vector<vector<double>>& A, const vector<double>& b, double tol, double w, int& iter) {
     int n = A.size();
     vector<double> x(n, 0.0);
     iter = 0;
-
     cout << "\nSOR Iterations (w=" << w << "):\n";
     while (true) {
         vector<double> x_old = x;
@@ -49,6 +48,7 @@ vector<double> SORDetailed(const vector<vector<double>>& A, const vector<double>
                 if (j != i) sum += A[i][j] * x[j];
             x[i] = (1 - w) * x[i] + w * (b[i] - sum) / A[i][i];
         }
+        
 printVector(x);
         iter++;
         double maxErr = 0.0;
