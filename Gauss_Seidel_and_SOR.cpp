@@ -66,3 +66,20 @@ int main() {
 
     vector<vector<double>> A(n, vector<double>(n));
     vector<double> b(n);
+
+    cout << "Enter coefficients of matrix A:\n";
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
+            cin >> A[i][j];
+
+    cout << "Enter constants vector b:\n";
+    for (int i = 0; i < n; i++)
+        cin >> b[i];
+
+    double tol;
+    cout << "Enter tolerance (e.g., 0.001): ";
+    cin >> tol;
+
+    double w;
+    cout << "Enter relaxation factor for SOR (e.g., 1.25): ";
+    cin >> w;
