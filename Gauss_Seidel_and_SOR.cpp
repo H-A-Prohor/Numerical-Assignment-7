@@ -83,3 +83,18 @@ int main() {
     double w;
     cout << "Enter relaxation factor for SOR (e.g., 1.25): ";
     cin >> w;
+
+int iterGS, iterSOR;
+    vector<double> xGS = gaussSeidelDetailed(A, b, tol, iterGS);
+    vector<double> xSOR = SORDetailed(A, b, tol, w, iterSOR);
+
+    cout << "\nGauss-Seidel converged in " << iterGS << " iterations.\n";
+    cout << "Final solution: ";
+    printVector(xGS);
+
+    cout << "\nSOR converged in " << iterSOR << " iterations.\n";
+    cout << "Final solution: ";
+    printVector(xSOR);
+
+    return 0;
+}
