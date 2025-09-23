@@ -1,4 +1,18 @@
-    cout << "\nGauss-Seidel Iterations:\n";
+#include <iostream>
+#include <vector>
+#include <cmath>
+using namespace std;
+
+void printVector(const vector<double>& x) {
+    for (double val : x) cout << val << "\t";
+    cout << endl;
+}
+
+vector<double> gaussSeidelDetailed(const vector<vector<double>>& A, const vector<double>& b, double tol, int& iter) {
+    int n = A.size();
+    vector<double> x(n, 0.0);
+    iter = 0;
+cout << "\nGauss-Seidel Iterations:\n";
     while (true) {
         vector<double> x_old = x;
         cout << "Iteration " << iter + 1 << ": ";
