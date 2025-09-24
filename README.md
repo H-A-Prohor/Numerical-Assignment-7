@@ -50,6 +50,4 @@ An improved version of Gauss-Seidel that introduces a relaxation factor `w` to p
 - C++ compiler (e.g., `g++`)
 - C++11 or higher
 
-### Compile
-```bash
-g++ Gauss_Seidel_and_SOR.cpp -o solver
+
