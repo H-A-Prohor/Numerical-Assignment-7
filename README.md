@@ -51,3 +51,5 @@ An improved version of Gauss-Seidel that introduces a relaxation factor `w` to p
 - C++11 or higher
 
 
+### Contributors
+[![Contributors](https://contrib.rocks/image?repo=H-A-Prohor/Team-Beta-Numerical-Assignmnent.)](https://github.com/H-A-Prohor/Team-Beta-Numerical-Assignmnent./graphs/contributors)
